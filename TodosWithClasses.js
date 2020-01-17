@@ -10,6 +10,9 @@ class TodoC extends Component {
                     todos: this.state.todos })                  
   }
   addTodoHandler =  () => {
+    //En React para sobrescribir un valor del estado o añadir uno nuevo hay que introducir siempre todos los valores que había previamente. Aqui se alimentan uno a uno pero se podría realimentar todos a la vez con el operador ternario ...
+    //Algo asi:
+    //this.setState(...this.state,this.state.newTodo)
     this.setState({ newTodo:'',
                     todos: this.state.todos.concat(this.state.newTodo)})
   }       
